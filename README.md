@@ -212,6 +212,21 @@ env_config.py           tiny .env loader + typed getters (no extra deps)
 requirements.txt        paramiko + whisperx
 ```
 
+## Disclaimer
+
+This project was built largely with the help of AI coding assistants — **Claude** (Anthropic), **Codex** (OpenAI), and **Gemini** (Google) were all used at different stages. The pipeline was verified end-to-end on real workloads — single-file transcription is bit-exact between runs and the batch orchestrator has processed dozens of hour-long recordings — but AI-assisted code shares the same failure modes as code written by anyone else. Read it before trusting it with anything that matters.
+
+### Responsible use
+
+This tool transcribes audio **and identifies who said what** (diarization). That is a privacy-sensitive operation. Before using it:
+
+- **Consent.** In most jurisdictions, recording people without their knowledge is illegal — or sharply limits what you can do with the recording. Get explicit consent from everyone in the audio you process.
+- **Storage.** Transcripts contain every word that was spoken, attributed to a speaker. Treat them like personal data: encrypted at rest, access-controlled, deleted when no longer needed.
+- **Do not use against people.** Mass surveillance, secretly recording private conversations, identifying speakers without authorization, or publishing transcripts of people who never agreed to be recorded — those are not the intended uses. If your use case relies on hiding what you are doing from the people being recorded, this is the wrong tool.
+- **Legal compliance.** LGPD (Brazil), GDPR (EU), wiretap statutes (varies by US state), and similar laws apply. This README is not legal advice — consult a lawyer if your situation is non-trivial.
+
+The MIT License below grants broad permission to use the code; it does **not** grant permission to violate the privacy of the people whose voices are processed by it.
+
 ## License
 
 MIT — see `LICENSE`.
