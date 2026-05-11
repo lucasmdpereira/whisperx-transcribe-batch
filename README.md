@@ -1,5 +1,7 @@
 # whisperx-batch
 
+![Pipeline overview](pipeline.png)
+
 Two cooperating CLIs for transcribing audio with WhisperX + pyannote diarization:
 
 - **`transcribe`** — process a single audio file: ffmpeg preprocessing (mono 16 kHz, voice filters, silence removal), WhisperX ASR, diarization, normalized speaker-tagged JSON output.
