@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.DS_Store
+
+# Legacy Portuguese name symlinks (kept locally for backward compatibility)
+/transcreve_lote
+/transcreve_whisperx
